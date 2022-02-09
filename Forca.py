@@ -30,13 +30,15 @@ class Forca:
             while theme:
                 print(f'\nThe word has {len(word)} letters - {word_attempt.count("_") } LEFT')
                 print(f"{attempts} attempts remaining")
-                print(f'{word_attempt}')
+                print(f'{"".join(word_attempt)}')
                 letter = input("\nType a Letter: ")
 
                 if len(letter) > 1:
                     print("Don't cheat!!")
                     continue
+
                 hit = False
+
                 for i, l in enumerate(word):
                     if letter.lower() == l.lower():
                         word_attempt[i] = l.upper()
